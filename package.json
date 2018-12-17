@@ -1,0 +1,15 @@
+{
+  "name": "serverless-wrap-log",
+  "version": "1.0.0",
+  "description": "A serverless plugin to wrap a function and add log on input and output.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raphael Araujo <xhamps@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "del": "^3.0.0",
+    "lodash": "^4.17.11"
+  }
+}
