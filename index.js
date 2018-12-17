@@ -63,7 +63,7 @@ class WrapLog {
   }
 
   finish() {
-    del.sync("**/*-wrap.js", {root: this.sls.config.servicePath });
+    del.sync(`**/*${this.sufixFile}.js`, {root: this.sls.config.servicePath });
     this.log('Cleaning up extraneous Wrap files');
   }
 }
