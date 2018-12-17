@@ -13,7 +13,7 @@ const WrapFunction = fn => {
 
     fn(event, context, (err, resp) => {
       if (err) log("Error Response", err);
-      if (resp) log("Success Responde", resp);
+      if (resp) log("Success Response", resp);
 
       callback(err, resp);
     });
