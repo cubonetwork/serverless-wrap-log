@@ -33,10 +33,9 @@ class WrapLog {
   run() {
     this.log('Wrapping your functions with Log...');
 
-    _.mapKeys( this.sls.service.functions, ({ handler, skipWrap }, key) => {
+    _.mapKeys( this.sls.service.functions, ({ handler, skipWrap = false }, key) => {
       try{
-        const skip = skipWrap || false;
-        if (skip) return;
+        if (skipWrap) return;
 
         const pathArr = handler.split('.');
         const pathFile = pathArr.slice(0, -1).join('.');
