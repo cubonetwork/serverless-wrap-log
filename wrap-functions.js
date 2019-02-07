@@ -2,8 +2,8 @@ module.exports = `
 const log = (label, data) => {
     var logData = JSON.parse(JSON.stringify(data));
 
-    if(logData.body) logData.body = JSON.parse(logData.body);
-
+    if(logData.body && logData.headers['Content-Type'] !== 'application/xml') logData.body = JSON.parse(logData.body);
+    
     console.log(label + ": " + JSON.stringify(logData, null, 2))
 };
 
