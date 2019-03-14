@@ -1,10 +1,12 @@
 module.exports = ` 
 const log = (label, data) => {
+  try {
     var logData = JSON.parse(JSON.stringify(data));
 
-    if(logData.body && logData.headers['Content-Type'] !== 'application/xml') logData.body = JSON.parse(logData.body);
+    if(logData.body && logData.headers && logData.headers['Content-Type'] === 'application/json') logData.body = JSON.parse(logData.body);
     
     console.log(label + ": " + JSON.stringify(logData, null, 2))
+  } catch (e) { }
 };
 
 const WrapFunction = fn => {

@@ -1,6 +1,6 @@
 {
   "name": "serverless-wrap-log",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A serverless plugin to wrap a function and add log on input and output.",
   "main": "index.js",
   "scripts": {
